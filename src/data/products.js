@@ -1,12 +1,15 @@
-
 // Import images
-import imgMinimal from '../assets/images/products/minimal_mammal_v2.png';
-import imgSecret from '../assets/images/products/secret_society_v2.png';
-import imgPhilosopher from '../assets/images/products/philosophers_stone_v2.png';
-import imgCyber from '../assets/images/products/cyber_glitch_v2.png';
-import imgFrost from '../assets/images/products/frost_walker_v2.png';
-import imgAlienhill from '../assets/images/products/alienhill_core_v2.png';
-import imgMockup from '../assets/images/products/product_mockup_v2.png';
+import imgMinimal from '../assets/images/products/minimal_mammal.png';
+import imgSecret from '../assets/images/products/secret_society.png';
+import imgPhilosopher from '../assets/images/products/philosophers_stone.png';
+import imgCyber from '../assets/images/products/cyber_glitch.png';
+import imgFrost from '../assets/images/products/frost_walker.png';
+import imgAlienhill from '../assets/images/products/alienhill_core.png';
+
+// Accessories
+import imgSticker from '../assets/images/products/holo_sticker.png';
+import imgFrame from '../assets/images/products/glitch_frame.png';
+import imgMousepad from '../assets/images/products/neural_mousepad.png';
 
 const products = [
     {
@@ -110,7 +113,7 @@ const products = [
         title: "Holo Sticker",
         collection: "ACC",
         price: 499.00,
-        image: imgMockup,
+        image: imgSticker,
         type: 'apparels',
         description: "Iridescent holographic stickers to mark your territory.",
         specs: {
@@ -126,7 +129,7 @@ const products = [
         title: "Glitch Frame",
         collection: "ACC",
         price: 1999.00,
-        image: imgMockup,
+        image: imgFrame,
         type: 'apparels',
         description: "Display your digital memories in a physical distortion field.",
         specs: {
@@ -142,7 +145,7 @@ const products = [
         title: "Neural Mousepad",
         collection: "ACC",
         price: 1499.00,
-        image: imgMockup,
+        image: imgMousepad,
         type: 'apparels',
         description: "High-precision surface for neural-linked reflexes.",
         specs: {
