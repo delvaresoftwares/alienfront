@@ -6,8 +6,8 @@ import menTropicalBack from '../assets/images/products/men/Tee/Tropical/back.jpg
 import menCoreFront from '../assets/images/products/men/Tee/core collection/front.jpg';
 import menCoreBack from '../assets/images/products/men/Tee/core collection/back.jpg';
 
-import womenShirtFront from '../assets/images/products/women/Tee/Shirt/Tropical/front.jpg';
-import womenShirtBack from '../assets/images/products/women/Tee/Shirt/Tropical/back.jpg';
+import womenShirtFront from '../assets/images/products/women/front.jpg';
+import womenShirtBack from '../assets/images/products/women/back.jpg';
 
 // Accessories (Keep existing)
 import imgSticker from '../assets/images/products/holo_sticker.png';
