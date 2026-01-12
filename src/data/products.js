@@ -9,11 +9,6 @@ import menCoreBack from '../assets/images/products/men/Tee/core collection/back.
 import womenShirtFront from '../assets/images/products/women/front.jpg';
 import womenShirtBack from '../assets/images/products/women/back.jpg';
 
-// Accessories (Keep existing)
-import imgSticker from '../assets/images/products/holo_sticker.png';
-import imgFrame from '../assets/images/products/glitch_frame.png';
-import imgMousepad from '../assets/images/products/neural_mousepad.png';
-
 const products = [
     // --- MEN'S COLLECTION ---
     {
@@ -65,57 +60,6 @@ const products = [
         gender: ['women'],
         description: "Vibrant cuts for the digital age.",
         specs: { material: "Cotton Blend", fit: "Crop / Regular", origin: "Earth" }
-    },
-    {
-        id: "holo-sticker",
-        title: "Holo Sticker",
-        collection: "ACC",
-        price: 499.00,
-        image: imgSticker,
-        category: 'accessories',
-        gender: ['men', 'women'],
-        description: "Iridescent holographic stickers to mark your territory.",
-        specs: {
-            material: "Vinyl",
-            weight: "N/A",
-            fit: "Universal",
-            print: "Holographic",
-            origin: "Earth"
-        }
-    },
-    {
-        id: "glitch-frame",
-        title: "Glitch Frame",
-        collection: "ACC",
-        price: 1999.00,
-        image: imgFrame,
-        category: 'accessories',
-        gender: ['men', 'women'],
-        description: "Display your digital memories in a physical distortion field.",
-        specs: {
-            material: "Acrylic/Digital Panel",
-            weight: "500g",
-            fit: "Desktop",
-            print: "Digital Display",
-            origin: "Shenzhen"
-        }
-    },
-    {
-        id: "neural-mousepad",
-        title: "Neural Mousepad",
-        collection: "ACC",
-        price: 1499.00,
-        image: imgMousepad,
-        category: 'accessories',
-        gender: ['men', 'women'],
-        description: "High-precision surface for neural-linked reflexes.",
-        specs: {
-            material: "Micro-textured Cloth",
-            weight: "Standard",
-            fit: "XL Desk Mat",
-            print: "Sublimation",
-            origin: "Earth"
-        }
     }
 ];
 
