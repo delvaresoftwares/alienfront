@@ -71,9 +71,25 @@ const Home = ({ products }) => {
   );
 }
 
+// New ScrollToTop component
+import { useEffect } from 'react';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Only scroll to top if we are NOT popping back in history (simple check)
+    // For now, we force top on new route to ensure user sees product from top
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home products={allProducts} />} />

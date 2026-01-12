@@ -169,6 +169,8 @@
         width: 100%;
         z-index: 1000;
         padding: 1.5rem;
+        /* iOS Safe Area Fix */
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
         background: var(--color-primary);
         color: #000;
         box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
