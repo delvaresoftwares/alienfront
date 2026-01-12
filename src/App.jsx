@@ -17,6 +17,19 @@ import Contact from './components/policies/Contact';
 import Terms from './components/policies/Terms';
 import Refunds from './components/policies/Refunds';
 
+// New ScrollToTop component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Only scroll to top if we are NOT popping back in history (simple check)
+    // For now, we force top on new route to ensure user sees product from top
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const Home = ({ products }) => {
   const [filter, setFilter] = useState('fashion');
 
@@ -71,20 +84,7 @@ const Home = ({ products }) => {
   );
 }
 
-// New ScrollToTop component
-import { useEffect } from 'react';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    // Only scroll to top if we are NOT popping back in history (simple check)
-    // For now, we force top on new route to ensure user sees product from top
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
 
 function App() {
   return (
