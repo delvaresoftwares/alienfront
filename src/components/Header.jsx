@@ -5,6 +5,15 @@ import AudioController from './AudioController';
 import { Link } from 'react-router-dom';
 
 const Header = ({ onCategorySelect }) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleMobileSelect = (category) => {
+    onCategorySelect(category);
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="logo-container">
@@ -13,7 +22,8 @@ const Header = ({ onCategorySelect }) => {
         </Link>
       </div>
 
-      <nav className="nav">
+      {/* Desktop Nav */}
+      <nav className="nav desktop-nav">
         <ul>
           <li onClick={() => onCategorySelect('fashion')}>FASHION</li>
           <li onClick={() => onCategorySelect('apparels')}>APPARELS</li>
@@ -22,6 +32,22 @@ const Header = ({ onCategorySelect }) => {
 
       <div className="header-actions">
         <AudioController />
+
+        {/* Mobile Hamburger */}
+        <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`}></span>
+        </button>
+      </div>
+
+      {/* Mobile Nav Overlay */}
+      <div className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
+        <ul>
+          <li onClick={() => handleMobileSelect('fashion')}>FASHION</li>
+          <li onClick={() => handleMobileSelect('apparels')}>APPARELS</li>
+          <li onClick={() => setIsMenuOpen(false)} style={{ marginTop: '2rem', fontSize: '0.8rem', color: '#666' }}>CLOSE</li>
+        </ul>
       </div>
     </header>
   );
