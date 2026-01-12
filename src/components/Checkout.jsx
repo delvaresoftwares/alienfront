@@ -147,8 +147,9 @@ const Checkout = () => {
                         <input required type="text" name="pincode" value={formData.pincode} onChange={handleInputChange} />
                     </div>
 
+// ... inside button
                     <button type="submit" className="checkout-btn" disabled={loading}>
-                        {loading ? 'Processing...' : `PAY $${product.price.toFixed(2)}`}
+                        {loading ? 'Processing...' : `PAY ₹${product.price.toFixed(2)}`}
                     </button>
                 </form>
 
@@ -157,11 +158,11 @@ const Checkout = () => {
                         <h3>Order Summary</h3>
                         <div className="cart-item">
                             <span>{product.title} (x1)</span>
-                            <span>${product.price.toFixed(2)}</span>
+                            <span>₹{product.price.toFixed(2)}</span>
                         </div>
                         <div className="cart-total">
                             <span>Total</span>
-                            <span>${product.price.toFixed(2)}</span>
+                            <span>₹{product.price.toFixed(2)}</span>
                         </div>
                     </div>
                 </div>

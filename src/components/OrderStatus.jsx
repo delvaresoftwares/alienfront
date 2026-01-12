@@ -99,7 +99,7 @@ const OrderStatus = () => {
                     <div style={{ color: '#aaa', margin: '2rem auto', maxWidth: '400px', textAlign: 'left', border: '1px solid #333', padding: '1rem', borderRadius: '8px' }}>
                         <p><strong>Order ID:</strong> {orderId}</p>
                         <p><strong>Item:</strong> {orderDetails.product.title}</p>
-                        <p><strong>Amount:</strong> ${orderDetails.product.price.toFixed(2)}</p>
+                        <p><strong>Amount:</strong> ₹{orderDetails.product.price.toFixed(2)}</p>
                     </div>
                 )}
                 <Link to="/" className="checkout-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>CONTINUE SHOPPING</Link>
