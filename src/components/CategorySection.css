@@ -1,0 +1,35 @@
+.category-section {
+    padding: 4rem 5%;
+    min-height: 100vh;
+    background: var(--color-bg);
+}
+
+.section-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-primary);
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}

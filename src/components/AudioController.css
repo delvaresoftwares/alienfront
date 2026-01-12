@@ -1,0 +1,20 @@
+.audio-controller {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.audio-controller:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+.audio-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

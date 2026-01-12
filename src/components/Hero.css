@@ -1,0 +1,115 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+}
+
+.hero-content {
+    z-index: 2;
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero-title span {
+    display: block;
+}
+
+.stroke-text {
+    -webkit-text-stroke: 2px var(--color-primary);
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cta-button {
+    padding: 1rem 3rem;
+    background: var(--color-primary);
+    color: #000;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    background: #fff;
+}
+
+.hero-visual {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero-img {
+    max-height: 90vh;
+    z-index: 1;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+    transition: transform 0.1s ease-out;
+    /* Use mask or specific image editing if background removal isn't perfect, 
+     but assume generated images are relatively clean or solid background 
+     that blends with Multiply or just overlaid. 
+     Since I used specific prompts for solid/cutout, standard display is fine. */
+}
+
+.blend-mode {
+    mix-blend-mode: screen;
+    /* Filters out black background */
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-visual {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .hero-img {
+        max-height: 50vh;
+    }
+}

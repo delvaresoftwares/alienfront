@@ -1,0 +1,69 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-container {
+    width: 60px;
+    /* Small square logo */
+    height: 60px;
+    overflow: hidden;
+    /* Mask out other logos */
+    border-radius: 20%;
+    /* Optional: slightly rounded */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container .logo {
+    height: 100%;
+    width: auto;
+    /* Scale and shift to show the middle logo */
+    transform: scale(2.8) translateX(-1px);
+    object-fit: contain;
+}
+
+.nav ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav li {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+    cursor: pointer;
+    color: #888;
+}
+
+.nav li:hover {
+    color: var(--color-primary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .nav {
+        display: none;
+        /* Mobile menu to be implemented if requested, or simplified */
+    }
+}
