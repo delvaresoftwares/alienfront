@@ -25,8 +25,9 @@ const Header = ({ onCategorySelect }) => {
       {/* Desktop Nav */}
       <nav className="nav desktop-nav">
         <ul>
-          <li onClick={() => onCategorySelect('fashion')}>FASHION</li>
-          <li onClick={() => onCategorySelect('apparels')}>APPARELS</li>
+          <li onClick={() => onCategorySelect('men')}>MEN</li>
+          <li onClick={() => onCategorySelect('women')}>WOMEN</li>
+          <li onClick={() => onCategorySelect('accessories')}>ACCESSORIES</li>
         </ul>
       </nav>
 
@@ -44,8 +45,9 @@ const Header = ({ onCategorySelect }) => {
       {/* Mobile Nav Overlay */}
       <div className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li onClick={() => handleMobileSelect('fashion')}>FASHION</li>
-          <li onClick={() => handleMobileSelect('apparels')}>APPARELS</li>
+          <li onClick={() => handleMobileSelect('men')}>MEN</li>
+          <li onClick={() => handleMobileSelect('women')}>WOMEN</li>
+          <li onClick={() => handleMobileSelect('accessories')}>ACCESSORIES</li>
           <li onClick={() => setIsMenuOpen(false)} style={{ marginTop: '2rem', fontSize: '0.8rem', color: '#666' }}>CLOSE</li>
         </ul>
       </div>

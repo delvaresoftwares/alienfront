@@ -18,7 +18,8 @@ const products = [
         collection: "01",
         price: 3999.00,
         image: imgMinimal,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'], // Unisex
         description: "A minimalist masterpiece featuring clean lines and geometric aesthetics. Perfect for the modern urban explorer who values simplicity and impact.",
         specs: {
             material: "100% Organic Cotton",
@@ -34,7 +35,8 @@ const products = [
         collection: "02",
         price: 4499.00,
         image: imgPhilosopher,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'],
         description: "Ancient wisdom meets future tech. This design embodies the eternal quest for knowledge and the transmutation of the self.",
         specs: {
             material: "Premium Cotton Blend",
@@ -50,7 +52,8 @@ const products = [
         collection: "03",
         price: 4299.00,
         image: imgFrost,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'],
         description: "Stay cold, perform hot. Visuals inspired by the frozen wastelands of a post-apocalyptic future.",
         specs: {
             material: "Thermal Cotton Knit",
@@ -66,7 +69,8 @@ const products = [
         collection: "04",
         price: 3799.00,
         image: imgCyber,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'],
         description: "Reality is breaking down. Embrace the error with this vibrant, chaotic glitch art piece.",
         specs: {
             material: "100% Cotton",
@@ -82,7 +86,8 @@ const products = [
         collection: "05",
         price: 5499.00,
         image: imgSecret,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'],
         description: "If you know, you know. Members only access to high-tier apparel. Subtlety is key.",
         specs: {
             material: "Heavyweight French Terry",
@@ -98,7 +103,8 @@ const products = [
         collection: "06",
         price: 2999.00,
         image: imgAlienhill,
-        type: 'fashion',
+        category: 'clothing',
+        gender: ['men', 'women'],
         description: "The fast-forward basic. Represents the core identity of the Alienhill movement.",
         specs: {
             material: "Bio-Washed Cotton",
@@ -114,7 +120,8 @@ const products = [
         collection: "ACC",
         price: 499.00,
         image: imgSticker,
-        type: 'apparels',
+        category: 'accessories',
+        gender: ['men', 'women'],
         description: "Iridescent holographic stickers to mark your territory.",
         specs: {
             material: "Vinyl",
@@ -130,7 +137,8 @@ const products = [
         collection: "ACC",
         price: 1999.00,
         image: imgFrame,
-        type: 'apparels',
+        category: 'accessories',
+        gender: ['men', 'women'],
         description: "Display your digital memories in a physical distortion field.",
         specs: {
             material: "Acrylic/Digital Panel",
@@ -146,7 +154,8 @@ const products = [
         collection: "ACC",
         price: 1499.00,
         image: imgMousepad,
-        type: 'apparels',
+        category: 'accessories',
+        gender: ['men', 'women'],
         description: "High-precision surface for neural-linked reflexes.",
         specs: {
             material: "Micro-textured Cloth",

@@ -31,7 +31,7 @@ const ScrollToTop = () => {
 };
 
 const Home = ({ products }) => {
-  const [filter, setFilter] = useState('fashion');
+  const [filter, setFilter] = useState('men');
 
   // Function to handle category selection from Header
   const handleCategorySelect = (category) => {
@@ -50,7 +50,24 @@ const Home = ({ products }) => {
   // Filter products
   const displayedProducts = filter === 'all'
     ? products
-    : products.filter(p => p.type === filter);
+    : products.filter(p => {
+      if (filter === 'men' || filter === 'women') {
+        return p.category === 'clothing' && p.gender.includes(filter);
+      }
+      if (filter === 'accessories') {
+        return p.category === 'accessories';
+      }
+      return false;
+    });
+
+  const getTitle = () => {
+    switch (filter) {
+      case 'men': return "MEN'S COLLECTION";
+      case 'women': return "WOMEN'S COLLECTION";
+      case 'accessories': return "GEAR & ACCESSORIES";
+      default: return "ALL PRODUCTS";
+    }
+  };
 
   return (
     <>
@@ -58,10 +75,9 @@ const Home = ({ products }) => {
       <Hero onExplore={handleExplore} />
 
       <main id="products-anchor">
-        {/* If filter is all or fashion, show standard fashion grid items */}
         <CategorySection
           id="main-grid"
-          title={filter === 'all' ? "ALL PRODUCTS" : (filter === 'fashion' ? "CLOTHING COLLECTIONS" : "APPARELS & GEAR")}
+          title={getTitle()}
           products={displayedProducts}
         />
       </main>

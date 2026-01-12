@@ -19,14 +19,14 @@ const ProductDetail = ({ products }) => {
         setTimeout(() => setIsAdded(false), 2000);
     };
 
-    // Filter Similar Products (Same Type, Exclude Current)
+    // Filter Similar Products (Same Category)
     const similarProducts = products
-        .filter(p => p.type === product.type && p.title !== product.title)
+        .filter(p => p.category === product.category && p.title !== product.title)
         .slice(0, 3);
 
-    // Filter Other Categories (Different Type)
+    // Filter Other Categories
     const otherProducts = products
-        .filter(p => p.type !== product.type)
+        .filter(p => p.category !== product.category)
         .slice(0, 3);
 
     return (
