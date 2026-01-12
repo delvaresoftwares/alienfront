@@ -46,11 +46,28 @@
     height: 80%;
     object-fit: contain;
     z-index: 2;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+    opacity: 1;
+    /* Default visibility */
 }
 
-.card-container:hover .card-img {
+/* Hover Effect Logic */
+.card-img.back {
+    opacity: 0;
+    z-index: 3;
+    /* Sit on top when visible */
+}
+
+.card-container:hover .card-img.front {
+    opacity: 0;
+    /* Hide front */
+    transform: translateX(-50%) translateZ(80px) scale(1.15) translateY(-20px);
+}
+
+.card-container:hover .card-img.back {
+    opacity: 1;
+    /* Show back */
     transform: translateX(-50%) translateZ(80px) scale(1.15) translateY(-20px);
     filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.4));
 }

@@ -1,118 +1,70 @@
-// Import images
-import imgMinimal from '../assets/images/products/minimal_mammal.png';
-import imgSecret from '../assets/images/products/secret_society.png';
-import imgPhilosopher from '../assets/images/products/philosophers_stone.png';
-import imgCyber from '../assets/images/products/cyber_glitch.png';
-import imgFrost from '../assets/images/products/frost_walker.png';
-import imgAlienhill from '../assets/images/products/alienhill_core.png';
+// Product Images
+import menPhilFront from '../assets/images/products/men/Tee/Phil\'Stone/front.jpg';
+import menPhilBack from '../assets/images/products/men/Tee/Phil\'Stone/back.jpg';
+import menTropicalFront from '../assets/images/products/men/Tee/Tropical/front.jpg';
+import menTropicalBack from '../assets/images/products/men/Tee/Tropical/back.jpg';
+import menCoreFront from '../assets/images/products/men/Tee/core collection/front.jpg';
+import menCoreBack from '../assets/images/products/men/Tee/core collection/back.jpg';
 
-// Accessories
+import womenShirtFront from '../assets/images/products/women/Tee/Shirt/front.jpg';
+import womenShirtBack from '../assets/images/products/women/Tee/Shirt/back.jpg';
+
+// Accessories (Keep existing)
 import imgSticker from '../assets/images/products/holo_sticker.png';
 import imgFrame from '../assets/images/products/glitch_frame.png';
 import imgMousepad from '../assets/images/products/neural_mousepad.png';
 
 const products = [
+    // --- MEN'S COLLECTION ---
     {
-        id: "minimal-mammal",
-        title: "Minimal Mammal",
-        collection: "01",
-        price: 3999.00,
-        image: imgMinimal,
-        category: 'clothing',
-        gender: ['men', 'women'], // Unisex
-        description: "A minimalist masterpiece featuring clean lines and geometric aesthetics. Perfect for the modern urban explorer who values simplicity and impact.",
-        specs: {
-            material: "100% Organic Cotton",
-            weight: "240 GSM",
-            fit: "Oversized Fit",
-            print: "Screen Print",
-            origin: "Earth"
-        }
-    },
-    {
-        id: "philosophers-stone",
+        id: "men-philosopher",
         title: "Philosopher's Stone",
-        collection: "02",
+        collection: "MEN 01",
         price: 4499.00,
-        image: imgPhilosopher,
+        image: menPhilFront,
+        imageBack: menPhilBack,
         category: 'clothing',
-        gender: ['men', 'women'],
-        description: "Ancient wisdom meets future tech. This design embodies the eternal quest for knowledge and the transmutation of the self.",
-        specs: {
-            material: "Premium Cotton Blend",
-            weight: "260 GSM",
-            fit: "Relaxed Boxy Fit",
-            print: "High-Density Puff Print",
-            origin: "Alchemy Lab/Earth"
-        }
+        gender: ['men'],
+        description: "Alchemy meets oversize. The signature stone print.",
+        specs: { material: "Cotton", fit: "Oversized", origin: "Earth" }
     },
     {
-        id: "frost-walker",
-        title: "Frost Walker",
-        collection: "03",
-        price: 4299.00,
-        image: imgFrost,
+        id: "men-tropical",
+        title: "Neon Tropical",
+        collection: "MEN 02",
+        price: 3999.00,
+        image: menTropicalFront,
+        imageBack: menTropicalBack,
         category: 'clothing',
-        gender: ['men', 'women'],
-        description: "Stay cold, perform hot. Visuals inspired by the frozen wastelands of a post-apocalyptic future.",
-        specs: {
-            material: "Thermal Cotton Knit",
-            weight: "280 GSM",
-            fit: "Regular Street Fit",
-            print: "Digital Direct",
-            origin: "Cryo-System/Earth"
-        }
+        gender: ['men'],
+        description: "Summer noir aesthetics.",
+        specs: { material: "Cotton", fit: "Regular", origin: "Earth" }
     },
     {
-        id: "cyber-glitch",
-        title: "Cyber Glitch",
-        collection: "04",
-        price: 3799.00,
-        image: imgCyber,
-        category: 'clothing',
-        gender: ['men', 'women'],
-        description: "Reality is breaking down. Embrace the error with this vibrant, chaotic glitch art piece.",
-        specs: {
-            material: "100% Cotton",
-            weight: "220 GSM",
-            fit: "Oversized",
-            print: "Rubberized Print",
-            origin: "The Cloud"
-        }
-    },
-    {
-        id: "secret-society",
-        title: "Secret Society",
-        collection: "05",
-        price: 5499.00,
-        image: imgSecret,
-        category: 'clothing',
-        gender: ['men', 'women'],
-        description: "If you know, you know. Members only access to high-tier apparel. Subtlety is key.",
-        specs: {
-            material: "Heavyweight French Terry",
-            weight: "320 GSM",
-            fit: "Luxury Street Fit",
-            print: "Embroidery + Print",
-            origin: "[REDACTED]"
-        }
-    },
-    {
-        id: "alienhill-core",
+        id: "men-core",
         title: "Alienhill Core",
-        collection: "06",
+        collection: "MEN 03",
         price: 2999.00,
-        image: imgAlienhill,
+        image: menCoreFront,
+        imageBack: menCoreBack,
         category: 'clothing',
-        gender: ['men', 'women'],
-        description: "The fast-forward basic. Represents the core identity of the Alienhill movement.",
-        specs: {
-            material: "Bio-Washed Cotton",
-            weight: "200 GSM",
-            fit: "Regular Fit",
-            print: "Reflective Logo",
-            origin: "Mothership"
-        }
+        gender: ['men'],
+        description: "The essential black tee.",
+        specs: { material: "Cotton", fit: "Regular", origin: "Mother Ship" }
+    },
+
+    // --- WOMEN'S COLLECTION ---
+    {
+        id: "women-shirt-tropical",
+        title: "Tropical Glitch",
+        collection: "WOMEN 01",
+        price: 3499.00,
+        image: womenShirtFront,
+        imageBack: womenShirtBack,
+        category: 'clothing',
+        gender: ['women'],
+        description: "Vibrant cuts for the digital age.",
+        specs: { material: "Cotton Blend", fit: "Crop / Regular", origin: "Earth" }
     },
     {
         id: "holo-sticker",
